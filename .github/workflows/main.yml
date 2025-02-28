@@ -11,6 +11,6 @@ jobs:
     uses: Nicolascf/shared-libraries/.github/workflows/flask-app-ci-cd.yml@feature-pipeline  # Chama a Golden Pipeline
     with:
       service_name: "app-example"
-      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-    secrets: inherit
+      aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      aws-region: ${{ secrets.AWS_REGION }}
