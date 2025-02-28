@@ -7,7 +7,7 @@ on:
       - feature-flask-app
 
 jobs:
-  call-golden-pipeline:
+  remote-pipeline:
     uses: Nicolascf/shared-libraries/.github/workflows/flask-app-ci-cd.yml@feature-pipeline  # Chama a Golden Pipeline
     with:
       service_name: "app-example"
