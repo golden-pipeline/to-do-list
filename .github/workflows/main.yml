@@ -10,7 +10,7 @@ jobs:
   remote-pipeline:
     uses: Nicolascf/shared-libraries/.github/workflows/flask-app-ci-cd.yml@feature-pipeline  # Chama a Golden Pipeline
     with:
-      service_name: "app-example"
+      service_name: "Flask-App-Service"
     secrets:
       AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
       AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
