@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual Environment
+venv/
+.env/
+.venv/
+pip-log.txt
+pip-delete-this-directory.txt
+
+# IDEs
+.vscode/
+*.swp
+.idea/
+
+# Logs e Arquivos Temporários
+*.log
+*.tmp
+.DS_Store
+
+# Docker (caso use)
+docker-compose.override.yml
