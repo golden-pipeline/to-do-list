@@ -14,3 +14,4 @@ jobs:
     secrets:
       DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
       DOCKER_TOKEN: ${{ secrets.DOCKER_TOKEN }}
+      GH_ACCESS_TOKEN: ${{ secrets.GH_ACCESS_TOKEN }}
