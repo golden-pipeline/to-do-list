@@ -11,4 +11,6 @@ jobs:
     uses: Nicolascf/shared-libraries/.github/workflows/flask-app-deploy-local.yml@feature-pipeline  # Chama a Golden Pipeline
     with:
       service_name: "Flask-App-Service"
-
+    secrets:
+      DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+      DOCKER_TOKEN: ${{ secrets.DOCKER_TOKEN }}
