@@ -2,7 +2,9 @@ from prometheus_flask_exporter import PrometheusMetrics
 from flask import Flask
 
 app = Flask(__name__)
-metrics = PrometheusMetrics(app)
+
+# Inicializa as métricas do Prometheus
+metrics = PrometheusMetrics(app, path="/metrics")
 
 # Exemplo de métrica personalizada
 metrics.info('app_info', 'Application info', version='1.0.0')
