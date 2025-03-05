@@ -3,11 +3,11 @@ from prometheus_flask_exporter import PrometheusMetrics
 
 app = Flask(__name__)
 
-# Inicia as métricas e registra a rota
+# Inicia as métricas
 metrics = PrometheusMetrics(app)
-metrics.register_default(
-    metrics.info('app_info', 'Application info', version='1.0.0')
-)
+
+# Registra a métrica app_info diretamente
+metrics.info('app_info', 'Application info', version='1.0.0')
 
 @app.route('/')
 def hello():
