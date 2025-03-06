@@ -1,4 +1,4 @@
-# Use uma imagem base oficial do Python
+# Usa uma imagem base oficial do Python
 FROM python:3.9-slim
 
 # Define o diretório de trabalho dentro do container
@@ -10,10 +10,11 @@ COPY requirements.txt .
 # Instala dependências
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY app .
+# Copia toda a aplicação mantendo a estrutura correta
+COPY . .
 
-# Define a porta exposta
+# Expõe a porta 5000
 EXPOSE 5000
 
 # Comando para rodar a aplicação
-CMD ["python", "__init__.py"]
+CMD ["python", "-m", "app"]
