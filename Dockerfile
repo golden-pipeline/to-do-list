@@ -16,4 +16,4 @@ COPY app .
 EXPOSE 5000
 
 # Comando para rodar a aplicação
-CMD ["python", "app/__init__.py"]
+CMD ["python", "__init__.py"]
