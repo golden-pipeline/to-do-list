@@ -5,7 +5,7 @@ from app.database import db, init_db
 from app.routes import bp
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://ncdferr:Nic11089@postgres-service:5432/flask-app-db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://ncdferr:Nic11089@postgres-service.postgres:5432/flask-app-db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 init_db(app)
