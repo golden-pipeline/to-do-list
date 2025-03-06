@@ -1,7 +1,7 @@
 from flask import jsonify, request, Blueprint
-from app.models import Task
+from old.models import Task
 from datetime import datetime
-from app.database import db
+from old.database import db
 
 bp = Blueprint('tasks', __name__)
 

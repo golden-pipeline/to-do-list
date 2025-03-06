@@ -1,8 +1,8 @@
 from flask import Flask
 from prometheus_flask_exporter import PrometheusMetrics
 import psutil
-from app.database import db, init_db
-from app.routes import bp
+from old.database import db, init_db
+from old.routes import bp
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://ncdferr:Nic11089@postgres-service.postgres:5432/flask-app-db'

@@ -1,4 +1,4 @@
-from app.database import db
+from old.database import db
 from datetime import datetime
 
 class Task(db.Model):
