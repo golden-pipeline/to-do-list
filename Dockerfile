@@ -2,7 +2,7 @@
 FROM python:3.9-slim
 
 # Define o diretório de trabalho dentro do container
-WORKDIR /app
+WORKDIR /backend
 
 # Copia os arquivos da aplicação
 COPY requirements.txt .
@@ -17,4 +17,4 @@ COPY . .
 EXPOSE 5000
 
 # Comando para rodar a aplicação
-CMD ["python", "app/main.py"]
+CMD ["python", "backend/main.py"]
