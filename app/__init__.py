@@ -1,17 +1,19 @@
 from flask import Flask
 from prometheus_flask_exporter import PrometheusMetrics
 import psutil
+from app.database import db, init_db
+from app.routes import bp
 
 app = Flask(__name__)
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://ncdferr:Nic11089@postgres-service:5432/flask-app-db'
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+
+init_db(app)
+
 metrics = PrometheusMetrics(app)
 
 metrics.info('app_info', 'Application info', version='1.0.0')
 
-@app.route('/')
-def hello():
-    return "Hello, DevOps v1.0.0"
-
-#Métircas de CPU e Memória.
 @metrics.gauge('cpu_percent', 'CPU usage percent')
 def cpu_percent():
     return psutil.cpu_percent()
@@ -19,6 +21,8 @@ def cpu_percent():
 @metrics.gauge('memory_percent', 'Memory usage percent')
 def memory_percent():
     return psutil.virtual_memory().percent
+
+app.register_blueprint(bp)
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=5000)

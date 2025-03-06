@@ -1,0 +1,6 @@
+Flask
+psycopg2-binary
+prometheus-flask-exporter
+psutil
+SQLAlchemy
+Flask-SQLAlchemy
