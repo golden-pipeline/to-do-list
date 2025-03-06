@@ -10,9 +10,9 @@ metrics = PrometheusMetrics(app)
 metrics.info('app_info', 'Application info', version='1.0.0')
 
 # Configuração do PostgreSQL
-POSTGRES_USER = os.getenv("POSTGRES_USER", "user")
-POSTGRES_PASSWORD = os.getenv("POSTGRES_PASSWORD", "password")
-POSTGRES_DB = os.getenv("POSTGRES_DB", "todo_db")
+POSTGRES_USER = os.getenv("POSTGRES_USER", "ncdferr")
+POSTGRES_PASSWORD = os.getenv("POSTGRES_PASSWORD", "Nic11089")
+POSTGRES_DB = os.getenv("POSTGRES_DB", "flask-app-db")
 POSTGRES_HOST = os.getenv("POSTGRES_HOST", "postgres-service.postgress")
 POSTGRES_PORT = os.getenv("POSTGRES_PORT", "5432")
 
