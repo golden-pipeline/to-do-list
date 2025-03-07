@@ -8,7 +8,7 @@ on:
 
 jobs:
   remote-pipeline:
-    uses: golden-pipeline/shared-libraries/.github/workflows/flask-app-deploy-local.yml@feature-pipeline  # Chama a Golden Pipeline
+    uses: golden-pipeline/remote-pipeline/.github/workflows/flask-app-deploy-local.yml@main  # Chama a Golden Pipeline
     with:
       service_name: "Flask-App-Service"
     secrets:
