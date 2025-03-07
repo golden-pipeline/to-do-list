@@ -1,0 +1,17 @@
+name: Aplicação - CI/CD
+
+on:
+  push:
+    branches:
+      - main
+      - feature-flask-app
+
+jobs:
+  remote-pipeline:
+    uses: golden-pipeline/remote-pipeline/.github/workflows/flask-app-deploy-local.yml@main  # Chama a Golden Pipeline
+    with:
+      service_name: "Flask-App-Service"
+    secrets:
+      DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+      DOCKER_TOKEN: ${{ secrets.DOCKER_TOKEN }}
+      GH_ACCESS_TOKEN: ${{ secrets.GH_ACCESS_TOKEN }}
