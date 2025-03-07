@@ -10,11 +10,15 @@ COPY requirements.txt .
 # Instala dependências
 RUN pip install --no-cache-dir -r requirements.txt
 
+RUN ls -al /app
+
 # Copia toda a aplicação mantendo a estrutura correta
 COPY . .
+
+RUN ls -al /app
 
 # Expõe a porta 5000
 EXPOSE 5000
 
 # Comando para rodar a aplicação
-CMD ["python", "backend/main.py"]
+CMD ["python", "main.py"]

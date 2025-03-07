@@ -23,3 +23,36 @@ pip-delete-this-directory.txt
 
 # Docker (caso use)
 docker-compose.override.yml
+
+# React
+node_modules/
+build/
+*.log
+*.env.local
+*.env.development.local
+*.env.test.local
+*.env.production.local
+public/
+
+# npm / yarn
+package-lock.json
+yarn.lock
+
+# MacOS
+*.DS_Store
+
+# Windows
+Thumbs.db
+
+# Jest
+jest-test-results.json
+
+# Next.js (se usar)
+.next/
+out/
+
+# TypeScript (se usar)
+*.tsbuildinfo
+
+# Editorconfig
+.editorconfig
