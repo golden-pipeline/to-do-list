@@ -36,7 +36,6 @@ public/
 
 # npm / yarn
 package-lock.json
-yarn.lock
 
 # MacOS
 *.DS_Store
